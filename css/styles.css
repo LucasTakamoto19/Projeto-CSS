@@ -1,37 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/2743470-fundo-no-conceito-de-tecnologia-vetor.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
 }
 
 html{
     position: relative;
     width: 100%;
+    overflow-x: hidden;
+    display: flex;
 }
 
-body{
-    position: relative;
-    width: 100%;
+/* aside */
+
+.aside{
+    background-color: rgb(31, 128, 203);
+    height: 100vh;
+    width: 300px;
+    padding: 15px 30px;
+    display: flex;
+    position: fixed;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    flex-flow: column;
+    z-index: 99;
+    transition: 0.4s;
 }
 
-aside{
-    flex: 1 1 200px;
-}
-
-nav{
-    background-color: rgb(79, 80, 147);
-    height: 850px;
-    width: 340px;
+.aside .profile{
     text-align: center;
-    margin-left: 0px;
-    margin-right: 15px;
-    margin-bottom: 15px;
+    margin: 10px 0;
+    margin: 10px;
+    padding: 10px;
+}
+
+.aside .profile img{
+    width: 150px;
+    border-radius: 50%;
 }
 
 .img-perfil{
-    height: 200px;
-    height: 200px;
-    border-radius: 50%;
     border: 5px solid #fff;
 }
 
@@ -39,20 +65,145 @@ nav{
     color: white;
 }
 
-.img-github{
-    padding: 15%;
-    width: 200px;
-    height: 180px;
+.aside .profile h1{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.aside .profile .social-icons a{
+    background-color: rgb(147, 175, 179);
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 37px;
     border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    margin: 1.5px;
+    line-height: 37px;
+    transition: 0.4s;
+}
+
+.aside .profile .social-icons a:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+/* Footer */
+.aside .footer{
+    text-align: center;
+    background-color: rgb(31, 128, 203);
+    width: 300px;
+    font-size: 14px;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+.aside .footer p{
+    color: white;
+}
+
+/* Main Section */
+
+main{
+    text-align: justify;
+    margin: 120px;
+    padding: 190px 15%;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+main .dados-pessoais{
+    margin: 10px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* Bio */
+#pagina{
+    height: 100vh 200px;
+    width: 100%;
+    bottom: 90%;
+    background-size: cover;
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+    color: white;
+}
+
+/* Jornada */
+
+#pagina-2{
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    color: white;
+    background-size: cover;
+    /* height: 100vh; */
+    width: 100%;
+}
+
+/* Inspiração */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+#pagina-3{
+    margin: 10px;
+    margin-left: -6px;
+    /* padding: 16px; */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    background-size: cover;
+    /* height: 100vh; */
+    width: 100%;
+}
+
+.section-card{
+    background-color: rgb(204, 209, 228);
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 26px;
+    margin: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.section-card img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-card:hover{
+    background-color: #708cc3;
+    cursor: pointer;
+}
+
+.section-card p{
+    text-align: center;
+    color: black;
 }
 
 
-@media screen and (max-width: 923px) {
-
-    aside {
-        height: 100px;
-    }
-}
+/* Icone de contato */
 
 .icon {
     position: fixed;
@@ -62,8 +213,8 @@ nav{
     background-color: #01e675;
     color: #fff;
     border-radius: 50%;
-    padding: 25px;
-    width: 6%;
+    padding: 7px;
+    width: 4.2%;
     text-align: center;
     text-decoration: none;
     box-shadow: 2px 2px 2px #c0bdbd;
@@ -76,3 +227,308 @@ nav{
     box-shadow: 1px 1px 1px #5fe690;
 }
 
+@media screen and (max-width: 600px) {
+    /* aside */
+    .aside {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Main Section */
+    main {
+        margin: 50px;
+        padding: 120px 10%;
+    }
+
+    main .dados-pessoais {
+        margin-left: 0;
+    }
+
+    /* Icone de contato */
+    .icon {
+        font-size: 20px;
+    }
+}
+
+
+/*@media screen and (max-width: 768px) {
+    body{
+        min-height: 100vh;
+    }
+    .profile{
+        flex-direction: column;
+        display: flex;
+    }
+
+    aside{
+        height: fit-content;
+    }
+
+    #pagina{
+        padding: 30px;
+    }
+
+    #ft-Perfil{
+        width: 200px;
+    }
+
+    #social-icons{
+        width: 40%;
+    }
+
+    main{
+        box-shadow: inset 0px 16px 15px -3px;
+        height: 100%;
+    }
+
+    .section-container{
+        margin: 12px 60px 0 90px;
+    }
+
+    #pagina-3{
+        margin: 12px 60px 0 90px;
+    }
+
+    aside main .perfil, #pagina, .container{
+        flex-direction: column;
+    }
+
+    .icon-whats{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* .container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card img{
+        width: 100%;
+    }
+
+    .card p{
+        padding: 16px;
+    }
+
+    aside .footer{
+        left: -300px;
+    } 
+}
+
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .aside{
+        display: flex;
+        width: 100%;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+         position: relative;
+    }
+
+    .aside .footer{
+        text-align: center;
+        background-color: rgb(31, 128, 203);
+        width: 100%;
+        font-size: 14px;
+        padding: 15px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transition: 0.4s;
+    }
+    
+    .aside .footer p{
+        color: white;
+    }
+
+    #pagina .dados-pessoais {
+        min-height: 100vh;
+        width: 100%;
+        margin-left: 30px;
+    }
+
+    /* .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .img-perfil {
+        margin-top: 30px;
+        margin: 50px;
+        width: 150px;
+        border-radius: 50%;
+    }
+
+    .social-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 30px;
+        width: 90%;
+        height: 50%;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 0px;
+        width: 90%;
+        margin: 0px;
+    }
+
+    .dados {
+        margin-left: 0px;
+        width: 100%;
+        font-size: 13px;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .box-1 {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: flex-start;
+        font-size: 14px;
+        text-align: justify;
+        width: 90%;
+        padding: 20px 20px 20px 0px;
+        margin: 10px 10px 10px 0px;
+    }
+    .section-container #pagina-3 {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 100px 50px 20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+
+    .dados-pessoais, #pagina {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-icons {
+        width: 100%;
+        height: 50%;
+    }
+
+    .content {
+        min-height: 100vh;
+        width: 100%;
+        margin-left: 30px;
+    }
+
+    .aside .profile{
+        text-align: center;
+        height: auto;
+        margin: 10px 0;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .aside .profile img{
+        width: 150px;
+        border-radius: 50%;
+    }
+
+    .aside .profile h1{
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .aside .profile .social-icons a{
+        background-color: rgb(147, 175, 179);
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 37px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 10px;
+        margin: 1.5px;
+        line-height: 37px;
+        transition: 0.4s;
+    }
+    
+    .aside .profile .social-icons a:hover{
+        background-color: rgb(0, 0, 0);
+    }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        justify-content: center;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 0px;
+    }
+
+    #info {
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+    .dados {
+        margin-left: 0px;
+        width: 100%;
+        font-size: 13px;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .box-1 {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: flex-start;
+        font-size: 14px;
+        text-align: justify;
+        width: 90%;
+        padding: 20px 20px 20px 0px;
+        margin: 10px 10px 10px 0px;
+    }
+    .section-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 100px 50px 20px;
+    }
+
+    .icon-whats{
+        width: 100%;
+        flex-direction: column;
+    }
+}
